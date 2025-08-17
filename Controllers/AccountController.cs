@@ -12,7 +12,6 @@ public class AccountController : IAccountController
         _account = account;
     }
 
-
     public decimal Deposit(decimal amount) => 
         _account.Balance += amount;
 
