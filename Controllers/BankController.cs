@@ -26,8 +26,6 @@ public class BankController : IBankController
         return newAccount.AccountNumber;
     }
 
-    public IAccountController? GetAccount(Guid accountNumber)
-    {
-        throw new NotImplementedException();
-    }
+    public IAccountController? GetAccount(Guid accountNumber) =>
+       _bank.Accounts.GetValueOrDefault(accountNumber);
 }
